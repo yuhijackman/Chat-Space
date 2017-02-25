@@ -1,3 +1,11 @@
 *.jpg
 *.png
 *.gif
+/tmp/cache
+*.pid
+
+log/development.log
+
+app/assets/stylesheets/index.scss
+
+app/assets/stylesheets/_reset.scss
