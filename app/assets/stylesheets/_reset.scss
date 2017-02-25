@@ -1,4 +1,4 @@
-     * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+     /* YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
      * http://cssreset.com
      * Copyright 2012 Yahoo! Inc. All rights reserved.
      * http://yuilibrary.com/license/
@@ -16,7 +16,7 @@
     */
     /*
         TODO test putting a class on HEAD.
-            - Fails on FF. 
+            - Fails on FF.
     */
     body,
     div,
@@ -123,3 +123,12 @@
     }
     /* YUI CSS Detection Stamp */
     #yui3-css-stamp.cssreset { display: none; }
+
+    body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
