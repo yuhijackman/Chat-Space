@@ -47,3 +47,4 @@ group :development do
   gem 'erb2haml'
 end
 
+gem 'font-awesome-sass', '~> 4.7.0'
