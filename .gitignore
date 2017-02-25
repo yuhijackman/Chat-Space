@@ -3,4 +3,4 @@
 *.gif
 /tmp/cache
 *.pid
-log/development.log
+*.log
