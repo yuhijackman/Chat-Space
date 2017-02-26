@@ -25,11 +25,11 @@ $skyblue: #38AEF0;
   height: 96px;
 
   p{
-  font-size: 16px;
-  font-weight: bold;
-  color: $white;
-  text-align: center;
-  padding: 30px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    padding: 30px 20px;
   }
 }
 
@@ -39,16 +39,16 @@ $skyblue: #38AEF0;
   height: 100vh;
 
   h2{
-  font-size: 15px;
-  color: $white;
-  padding: 20px 0 5px 20px;
+    font-size: 15px;
+    color: $white;
+    padding: 20px 0 5px 20px;
   }
 
   p{
-  font-size: 11px;
-  color: $white;
-  padding-left: 20px;
-  padding-bottom: 40px;
+    font-size: 11px;
+    color: $white;
+    padding-left: 20px;
+    padding-bottom: 40px;
   }
 }
 
@@ -62,15 +62,15 @@ $skyblue: #38AEF0;
   border-bottom: solid #eee;
 
   h2{
-  font-size: 20px;
-  color: #333;
-  padding: 35px 0 15px 40px;
+    font-size: 20px;
+    color: #333;
+    padding: 35px 0 15px 40px;
   }
 
   p{
-  font-size: 12px;
-  color: $gray;
-  padding-left: 40px;
+    font-size: 12px;
+    color: $gray;
+    padding-left: 40px;
   }
 
   .box{
@@ -88,47 +88,47 @@ $skyblue: #38AEF0;
   margin-left: 300px;
 
   h3{
-  color: #434A54;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 46px 0 10px 40px;
-  display: inline-block;
+    color: #434A54;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 46px 0 10px 40px;
+    display: inline-block;
   }
 
   p.date{
-  font-size: 12px;
-  color: $gray;
-  margin-left: 10px;
-  padding: 46px 0 0 10px;
-  display: inline-block;
+    font-size: 12px;
+    color: $gray;
+    margin-left: 10px;
+    padding: 46px 0 0 10px;
+    display: inline-block;
   }
 
   p.message{
-  padding-left:40px;
-  padding-bottom:40px;
+    padding-left:40px;
+    padding-bottom:40px;
   }
 }
 
 .box-edit{
-    float: right;
-    display: block;
-    width: 60px;
-    height: 40px;
-    border-style: solid;
-    font-weight: bold;
-    margin: 26px 40px 0 0;
-    border-color: $skyblue;
-    margin-top: 25px;
-    background-color: #f0f0f0;
-    text-align: center;
-    line-height: 2.7rem;
+  float: right;
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-style: solid;
+  font-weight: bold;
+  margin: 26px 40px 0 0;
+  border-color: $skyblue;
+  margin-top: 25px;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 2.7rem;
 
-     a{
+  a{
     font-size: 20px;
     border-top: blue;
     color: #57C3E9;
     text-decoration: none;
-      }
+  }
 }
 
 .clearfix:after{
@@ -141,25 +141,26 @@ $skyblue: #38AEF0;
   position: relative;
   height: 95px;
 
-  .form{ width: 70%;
-         height: 50px;
-         margin-top: 20px;
-         }
+  .form{
+    width: 70%;
+    height: 50px;
+    margin-top: 20px;
+  }
 
   .submit{
-        background-color: $skyblue;
-        color: white;
-        padding: 2px 22px;
-        line-height: 2.7rem;
-        float: right;
-        margin-top: 22px;
-        margin-right: 40px;
-        }
+    background-color: $skyblue;
+    color: white;
+    padding: 2px 22px;
+    line-height: 2.7rem;
+    float: right;
+    margin-top: 22px;
+    margin-right: 40px;
+  }
 
   .fa.fa-picture-o{
-        position: absolute;
-        top: 34px;
-        right: 113px;
-        padding-right: 45px;
-        }
+    position: absolute;
+    top: 34px;
+    right: 113px;
+    padding-right: 45px;
+  }
 }
