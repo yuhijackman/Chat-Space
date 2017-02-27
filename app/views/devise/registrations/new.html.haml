@@ -10,8 +10,9 @@
         .field
           .field-label
             = f.label :nickname
+            %em (6 characters maximum)
           .field-input
-            = f.text_field :nickname, autofocus: true
+            = f.text_field :nickname, autofocus: true, maxlength:"6"
         .field
           .field-label
             = f.label :email
