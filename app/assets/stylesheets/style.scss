@@ -1,0 +1,186 @@
+@import "variables";
+.indication {
+  background-color: $skyblue;
+  color :#EFFFFF;
+  text-align: center;
+  font-size: 16px;
+}
+
+.contents {
+  min-width: 600px;
+  height: 100%;
+}
+
+.left-content{
+  float: left;
+  width: 300px;
+  height: calc(100vh - 30px);
+}
+
+.top-left-content{
+  background-color: #253141;
+  position: relative;
+  width: 300px;
+  height: 96px;
+
+  p{
+    font-size: 16px;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    padding: 30px 0 15px 0;
+  }
+  .fa-cog{
+      margin-left: 12px;
+      margin-right: 22px;
+      color: $white;
+    }
+      .fa-edit{
+      margin-left: 15px;
+      color: $white;
+    }
+}
+
+.bottom-left-content{
+  background-color: #2f3e51;
+  width: 300px;
+  height: calc(100vh - 109px);
+
+  h2{
+    font-size: 15px;
+    color: $white;
+    padding: 20px 0 5px 20px;
+  }
+
+  p{
+    font-size: 11px;
+    color: $white;
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.right-content{
+  height: calc(100vh-30px);
+  width: calc(100%-300px);
+  margin-right: 0;
+}
+
+.top-right-content{
+  height: 93px;
+  border-bottom: solid #eee;
+
+  h2{
+    font-size: 20px;
+    color: #333;
+    padding: 30px 0 15px 40px;
+  }
+
+  p{
+    font-size: 12px;
+    color: $gray;
+    padding-left: 40px;
+  }
+
+  .box{
+    float:left;
+  }
+
+  .box-edit{
+    float:right;
+  }
+}
+
+.middle-right-content{
+  background-color: #AAA;
+  height: 600px;
+  margin-left: 300px;
+  padding-bottom: 20px;
+
+  h3{
+    color: #434A54;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 46px 0 10px 40px;
+    display: inline-block;
+  }
+
+  p.date{
+    font-size: 12px;
+    color: $gray;
+    margin-left: 10px;
+    padding: 46px 0 0 10px;
+    display: inline-block;
+  }
+
+  p.message{
+    padding-left:40px;
+    padding-bottom:40px;
+  }
+}
+
+.box-edit{
+  float: right;
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-style: solid;
+  font-weight: bold;
+  margin: 26px 40px 20px 20px;
+  border-color: $skyblue;
+  margin-top: 25px;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 2.7rem;
+
+  a{
+    font-size: 20px;
+    border-top: blue;
+    color: #57C3E9;
+    text-decoration: none;
+
+  }
+}
+
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.bottom-right-content{
+  position: relative;
+  height: 95px;
+
+  .form{
+    width: 65%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    float: left;
+  }
+
+  .submit{
+    position:absolute;
+    top: 22px;
+    background-color: $skyblue;
+    color: white;
+    height: 50px;
+    weight: 100px;
+    padding: 2px 15px;
+    line-height: 2.7rem;
+    float: right;
+  }
+
+  .fa.fa-picture-o{
+    position: absolute;
+    top: 34px;
+    right: 113px;
+    padding-right: 45px;
+  }
+  .fa-image{
+    position: absolute;
+    right: 180px;
+    top: 34px;
+  }
+}
