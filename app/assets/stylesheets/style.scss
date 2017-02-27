@@ -47,7 +47,7 @@ $skyblue: #38AEF0;
 .bottom-left-content{
   background-color: #2f3e51;
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 109px);
 
   h2{
     font-size: 15px;
@@ -98,6 +98,7 @@ $skyblue: #38AEF0;
   background-color: #AAA;
   height: 600px;
   margin-left: 300px;
+  padding-bottom: 20px;
 
   h3{
     color: #434A54;
