@@ -22,6 +22,7 @@ $skyblue: #38AEF0;
 
 .top-left-content{
   background-color: #253141;
+  position: relative;
   width: 300px;
   height: 96px;
 
@@ -30,8 +31,17 @@ $skyblue: #38AEF0;
     font-weight: bold;
     color: $white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 0 15px 0;
   }
+  .fa-cog{
+      margin-left: 12px;
+      margin-right: 22px;
+      color: $white;
+    }
+      .fa-edit{
+      margin-left: 15px;
+      color: $white;
+    }
 }
 
 .bottom-left-content{
@@ -60,13 +70,13 @@ $skyblue: #38AEF0;
 }
 
 .top-right-content{
-  height: 96px;
+  height: 93px;
   border-bottom: solid #eee;
 
   h2{
     font-size: 20px;
     color: #333;
-    padding: 35px 0 15px 40px;
+    padding: 30px 0 15px 40px;
   }
 
   p{
@@ -118,7 +128,7 @@ $skyblue: #38AEF0;
   height: 40px;
   border-style: solid;
   font-weight: bold;
-  margin: 26px 40px 0 0;
+  margin: 26px 40px 20px 20px;
   border-color: $skyblue;
   margin-top: 25px;
   background-color: #f0f0f0;
@@ -130,6 +140,7 @@ $skyblue: #38AEF0;
     border-top: blue;
     color: #57C3E9;
     text-decoration: none;
+
   }
 }
 
@@ -144,19 +155,23 @@ $skyblue: #38AEF0;
   height: 95px;
 
   .form{
-    width: 70%;
+    width: 65%;
     height: 50px;
     margin-top: 20px;
+    margin-left: 50px;
+    float: left;
   }
 
   .submit{
+    position:absolute;
+    top: 22px;
     background-color: $skyblue;
     color: white;
-    padding: 2px 22px;
+    height: 50px;
+    weight: 100px;
+    padding: 2px 15px;
     line-height: 2.7rem;
     float: right;
-    margin-top: 22px;
-    margin-right: 40px;
   }
 
   .fa.fa-picture-o{
@@ -164,5 +179,10 @@ $skyblue: #38AEF0;
     top: 34px;
     right: 113px;
     padding-right: 45px;
+  }
+  .fa-image{
+    position: absolute;
+    right: 180px;
+    top: 30px;
   }
 }

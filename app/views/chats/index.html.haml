@@ -7,8 +7,8 @@
       .top-left-content.clearfix
         %p
           YUHIJACKMAN
-          %i.fa.fa-pencil-square-o.fa-2x
-          %i.fa.fa-cog.fa-2x
+          =link_to fa_icon("edit 2x")
+          =link_to fa_icon("cog 2x")
       .bottom-left-content
         %h2 Sample Group1
         %p まだメッセージがありません。
@@ -44,4 +44,4 @@
         = form_for('') do |f|
           = f.text_field :message, placeholder: "Type a message",class: "form"
           = f.submit "SEND",class: "submit"
-          %i.fa.fa-picture-o.fa-2x
+        = link_to fa_icon("image 2x")
