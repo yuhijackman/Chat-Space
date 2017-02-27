@@ -10,13 +10,14 @@ $skyblue: #38AEF0;
 }
 
 .contents {
-  width: 100%;
+  min-width: 600px;
   height: 100%;
 }
 
 .left-content{
   float: left;
   width: 300px;
+  height: calc(100vh - 30px);
 }
 
 .top-left-content{
@@ -53,7 +54,8 @@ $skyblue: #38AEF0;
 }
 
 .right-content{
-  width: 100%;
+  height: calc(100vh-30px);
+  width: calc(100%-300px);
   margin-right: 0;
 }
 
