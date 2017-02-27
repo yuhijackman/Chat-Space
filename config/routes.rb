@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-root 'chats#index'
+  root 'chats#index'
 end

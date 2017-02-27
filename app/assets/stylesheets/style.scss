@@ -1,7 +1,4 @@
-$white: #fff;
-$gray: #999;
-$skyblue: #38AEF0;
-
+@import "variables";
 .indication {
   background-color: $skyblue;
   color :#EFFFFF;
@@ -184,6 +181,6 @@ $skyblue: #38AEF0;
   .fa-image{
     position: absolute;
     right: 180px;
-    top: 30px;
+    top: 34px;
   }
 }
