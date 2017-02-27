@@ -6,5 +6,3 @@
 *.log
 
 .bashrc
-
-test/controllers/chats_controller_test.rb
