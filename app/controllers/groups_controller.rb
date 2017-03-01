@@ -4,8 +4,14 @@ class GroupsController < ApplicationController
   end
 
   def create
-    Group.create(group_params)
-    redirect_to controller: :chats, action: :index
+      @group= Group.create(group_params)
+      if @group.save
+        redirect_to controller: :chats, action: :index
+        flash[:notice] = "チャットグループを作成しました。"
+      else
+        redirect_to :action => "new"
+        flash[:notice] = "グループ名を入力してください"
+      end
   end
 
   private

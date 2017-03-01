@@ -1,4 +1,4 @@
-=form_for [@group] do |f|
+=form_for [group] do |f|
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       =f.label :グループ名, class: 'chat-group-form__label'
@@ -22,4 +22,5 @@
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit "SAVE", class: "chat-group-form__action-btn", disable_with: "save"
+
 
