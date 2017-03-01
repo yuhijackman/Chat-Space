@@ -10,7 +10,8 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: 'チャットグループを作成しました'
     else
-      redirect_to new_group_path, alert: 'グループ名を入力してください'
+      flash.now[:alert] = 'グループ名を入力してください'
+      render new_group_path
     end
   end
 
@@ -24,7 +25,8 @@ class GroupsController < ApplicationController
     if @group.update(group_params)
       redirect_to root_path, notice: 'チャットグループが更新されました'
     else
-      redirect_to edit_group_path, alert: '入力内容を確認してください'
+      flash.now[:alert] = '入力内容を確認してください'
+      render :edit
     end
   end
 
