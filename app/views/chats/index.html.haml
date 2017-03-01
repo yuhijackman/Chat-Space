@@ -17,30 +17,3 @@
         %p まだメッセージがありません。
 
     .right-content
-      .top-right-content
-        .box
-          %h2 sampleグループ
-          %p Members: yuhi koizumi
-        .box-edit
-          = link_to "Edit",'/',class: "Edit"
-      .middle-right-content
-        %h3 Adampietrantonio
-        %p.date 2017/10/02 06:20:09
-        %p.message Good Mornig!
-
-        %h3 Adampietrantonio
-        %p.date 2017/10/02 06:23:09
-        %p.message LOLOL
-
-        %h3 Adampietrantonio
-        %p.date 2017/10/02 06:26:09
-        %p.message TEST
-
-        %h3 Adampietrantonio
-        %p.date 2017/10/02 06:29:09
-        %p.message LIKE
-      .bottom-right-content
-        = form_for('') do |f|
-          = f.text_field :message, placeholder: "Type a message",class: "form"
-          = f.submit "SEND",class: "submit"
-        = link_to fa_icon("image 2x")
