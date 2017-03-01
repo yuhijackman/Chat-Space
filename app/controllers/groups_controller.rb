@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to root_path, action: :index, notice: 'チャットグループを作成しました'
+      redirect_to root_path, notice: 'チャットグループを作成しました'
     else
       redirect_to new_group_path, alert: 'グループ名を入力してください'
     end
