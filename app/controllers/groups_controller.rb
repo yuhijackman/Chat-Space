@@ -13,12 +13,19 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    group = Group.find(params[:id])
-    @name = group.name
+    @group = Group.find(params[:id])
   end
 
   def show
     @group = Group.find(params[:id])
+  end
+
+  def update
+    group = Group.find(params[:id])
+    if user_signed_in?
+    group.update(group_params)
+    redirect_to root_path, notice: 'チャットグループが更新されました'
+    end
   end
 
   private
