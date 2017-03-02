@@ -10,7 +10,7 @@
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
         = collection_check_boxes(:group, :user_ids, User.all, :id, :nickname) do |b|
-          = b.label{ b.check_box + b.text }
+          = b.label { b.check_box + b.text }
       #user-search-result
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
