@@ -19,6 +19,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @chat = Chat.new
   end
 
   def update

@@ -40,7 +40,7 @@
         %p.date 2017/10/02 06:29:09
         %p.message LIKE
       .bottom-right-content
-        = form_for('') do |f|
-          = f.text_field :message, placeholder: "Type a message",class: "form"
-          = f.submit "SEND",class: "submit"
+        = form_for [@group, @chat] do |f|
+          = f.text_field :body, placeholder: "Type a message", class: "form"
+          = f.submit "SEND", class: "submit"
         = link_to fa_icon("image 2x")
