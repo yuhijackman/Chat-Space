@@ -1,0 +1,46 @@
+%body
+  %header
+    .heading
+  .contents
+    .left-content
+      .top-left-content.clearfix
+        %p
+          =current_user.nickname
+          =link_to fa_icon("edit 2x"), new_group_path
+          =link_to fa_icon("cog 2x"), edit_user_registration_path
+      .bottom-left-content
+        %h2 Sample Group1
+        %p まだメッセージがありません。
+        %h2 Sample Group2
+        %p まだメッセージがありません。
+        %h2 Sample Group3
+        %p まだメッセージがありません。
+
+    .right-content
+      .top-right-content
+        .box
+          %h2 sampleグループ
+          %p Members: yuhi koizumi
+        .box-edit
+          = link_to "Edit", edit_group_path, class: "Edit"
+      .middle-right-content
+        %h3 Adampietrantonio
+        %p.date 2017/10/02 06:20:09
+        %p.message Good Mornig!
+
+        %h3 Adampietrantonio
+        %p.date 2017/10/02 06:23:09
+        %p.message LOLOL
+
+        %h3 Adampietrantonio
+        %p.date 2017/10/02 06:26:09
+        %p.message TEST
+
+        %h3 Adampietrantonio
+        %p.date 2017/10/02 06:29:09
+        %p.message LIKE
+      .bottom-right-content
+        = form_for('') do |f|
+          = f.text_field :message, placeholder: "Type a message",class: "form"
+          = f.submit "SEND",class: "submit"
+        = link_to fa_icon("image 2x")
