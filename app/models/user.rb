@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   has_many :group_users
   has_many :groups, through: :group_users
+  accepts_nested_attributes_for :groups
 end
