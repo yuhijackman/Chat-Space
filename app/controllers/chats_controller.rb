@@ -4,8 +4,13 @@ class ChatsController < ApplicationController
   end
 
   def create
-    Chat.create(chat_params)
-    redirect_to group_chats_path
+    @chat = Chat.new(chat_params)
+    if @chat.save
+      redirect_to group_chats_path
+    else
+      flash.now[:alert] = 'メッセージを入力して下さい'
+      render :index
+    end
   end
 
   private
