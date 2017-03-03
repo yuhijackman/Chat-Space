@@ -19,7 +19,7 @@
         .box-edit
           = link_to "Edit", edit_group_path(@group), class: "Edit"
       .middle-right-content
-        = render partial: 'chat', collection: @chats
+        = render partial: 'chat', collection: @group.chats
       .bottom-right-content
         = form_for [@group,@chat] do |f|
           = f.text_field :body, placeholder: "Type a message", class: "form"
