@@ -1,11 +1,7 @@
 class ChatsController < ApplicationController
+  before_action :set_group, only: [:index, :create]
 
   def index
-    @chat = Chat.new
-    @group = Group.find(params[:group_id])
-    @groups = current_user.groups.order('id DESC')
-    @users = @group.users
-    @chats = @group.chats
   end
 
   def create
@@ -21,6 +17,14 @@ class ChatsController < ApplicationController
 
   def chat_params
     params.require(:chat).permit(:body).merge(group_id: params[:group_id], user_id: current_user.id)
+  end
+
+  def set_group
+    @chat = Chat.new
+    @group = Group.find(params[:group_id])
+    @groups = current_user.groups.order('id DESC')
+    @users = @group.users
+    @chats = @group.chats
   end
 
 end
