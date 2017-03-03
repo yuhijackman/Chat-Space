@@ -9,11 +9,19 @@
           =link_to fa_icon("edit 2x"), new_group_path
           =link_to fa_icon("cog 2x"), edit_user_registration_path
       .bottom-left-content
-        %h2 Sample Group1
-        %p まだメッセージがありません。
-        %h2 Sample Group2
-        %p まだメッセージがありません。
-        %h2 Sample Group3
-        %p まだメッセージがありません。
+        = render partial: 'group', collection: @groups
 
     .right-content
+      .top-right-content
+        .box
+          %h2 #{@group.name}
+          %p Members: yuhi
+        .box-edit
+          = link_to "Edit", edit_group_path(@group), class: "Edit"
+      .middle-right-content
+        = render partial: 'chat', collection: @chats
+      .bottom-right-content
+        = form_for [@group,@chat] do |f|
+          = f.text_field :body, placeholder: "Type a message", class: "form"
+          = f.submit "SEND", class: "submit"
+        = link_to fa_icon("image 2x")
