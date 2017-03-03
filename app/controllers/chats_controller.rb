@@ -2,6 +2,7 @@ class ChatsController < ApplicationController
   before_action :set_group, only: [:index, :create]
 
   def index
+    @chat = Chat.new
   end
 
   def create
@@ -21,7 +22,6 @@ class ChatsController < ApplicationController
   end
 
   def set_group
-    @chat = Chat.new
     @group = Group.find(params[:group_id])
     @groups = current_user.groups.order('id DESC')
     @chats = @group.chats
