@@ -1,0 +1,15 @@
+%body
+  %header
+    .heading
+  .contents
+    .left-content
+      .top-left-content.clearfix
+        %p
+          =current_user.nickname
+          =link_to fa_icon("edit 2x"), new_group_path
+          =link_to fa_icon("cog 2x"), edit_user_registration_path
+      .bottom-left-content
+        - @groups.each do |group|
+          = link_to '#{group.name}', group_chats_path(@groups)
+          %p まだメッセージがありません
+

@@ -1,6 +1,10 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :show, :update]
 
+  def index
+    @groups = current_user.groups.order('id DESC').limit(5)
+  end
+
   def new
     @group = Group.new
   end
@@ -16,10 +20,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
-    @chat = Chat.new
   end
 
   def update
