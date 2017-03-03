@@ -24,7 +24,6 @@ class ChatsController < ApplicationController
     @chat = Chat.new
     @group = Group.find(params[:group_id])
     @groups = current_user.groups.order('id DESC')
-    @users = @group.users
     @chats = @group.chats
   end
 
