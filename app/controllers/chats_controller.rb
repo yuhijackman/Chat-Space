@@ -3,9 +3,9 @@ class ChatsController < ApplicationController
   def index
     @chat = Chat.new
     @group = Group.find(params[:group_id])
-    @groups = current_user.groups.order('id DESC').limit(5)
+    @groups = current_user.groups.order('id DESC')
     @users = @group.users
-    @chats = @group.chats.last(4)
+    @chats = @group.chats
   end
 
   def create
