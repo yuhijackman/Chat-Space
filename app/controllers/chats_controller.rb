@@ -13,8 +13,7 @@ class ChatsController < ApplicationController
     if @chat.save
       redirect_to group_chats_path
     else
-      flash.now[:alert] = 'メッセージを入力して下さい'
-      render :index
+      redirect_to :back, alert: 'メッセージを入力して下さい'
     end
   end
 
