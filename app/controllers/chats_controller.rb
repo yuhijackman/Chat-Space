@@ -22,7 +22,7 @@ class ChatsController < ApplicationController
   end
 
   def set_group
-    @group = Group.includes(:chats).find(params[:group_id])
+    @group = Group.find(params[:group_id])
     @groups = current_user.groups.order('id DESC')
   end
 
