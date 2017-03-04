@@ -4,7 +4,7 @@ describe ChatsController do
 
   describe 'GET #index' do
     login_user
-    group = create(:group)
+    let(:group) { create(:group) }
 
     it "renders the :index template" do
       get :index, group_id: group.id
