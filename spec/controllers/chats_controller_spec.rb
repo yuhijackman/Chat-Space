@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 describe ChatsController do
+
     login_user
     let(:user) { create(:user) }
     let(:group) { create(:group) }
     let(:invalid_attributes) { FactoryGirl.attributes_for(:chat, body: "") }
 
   describe 'GET #index' do
+
     it 'assigns the requested contact to @chat' do
       get :index, params: { group_id: group.id }
       expect(assigns(:chat)).to be_a_new(Chat)
@@ -29,6 +31,7 @@ describe ChatsController do
   end
 
   describe 'POST #create' do
+
     it 'save the new content in the database' do
       expect{
         post :create, params: { group_id: group.id, chat: attributes_for(:chat) } }.to change(Chat, :count).by(1)
