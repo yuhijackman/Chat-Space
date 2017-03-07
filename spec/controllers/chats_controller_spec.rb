@@ -48,6 +48,15 @@ describe ChatsController do
         post :create, params: { group_id: group.id, chat: invalid_attributes }
         expect(invalid_attributes).to render_template :index, params: { group_id: group.id }
       end
+
+      it 'can not save the chat' do
+        expect{ post :create, params: { group_id: group.id, chat: invalid_attributes } }.to change(Chat, :count).by(0)
+      end
+
+      it 'shows alert a message' do
+        post :create, params: { group_id: group.id, chat: invalid_attributes }
+        expect(flash[:alert]).to include('メッセージを入力して下さい')
+      end
     end
   end
 end
