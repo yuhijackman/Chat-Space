@@ -14,12 +14,12 @@ describe ChatsController do
       expect(assigns(:chat)).to be_a_new(Chat)
     end
 
-     it 'assigns the requested contact to @group' do
+    it 'assigns the requested contact to @group' do
       get :index, params: { group_id: group.id }
       expect(assigns(:group)).to eq (group)
     end
 
-     it 'assigns the requested contact to @groups' do
+    it 'assigns the requested contact to @groups' do
       get :index,  params: { group_id: group.id }
       expect(assigns(:groups)).to eq subject.current_user.groups
     end
@@ -31,20 +31,23 @@ describe ChatsController do
   end
 
   describe 'POST #create' do
-
-    it 'save the new content in the database' do
-      expect{
+    context 'with valid attributes' do
+      it 'save the new content in the database' do
+        expect{
         post :create, params: { group_id: group.id, chat: attributes_for(:chat) } }.to change(Chat, :count).by(1)
+      end
+
+      it 'successfully create to the render :index template ' do
+        post :create, params: { group_id: group.id, chat: attributes_for(:chat)}
+        expect(response).to redirect_to(group_chats_path)
+      end
     end
 
-    it 'create a new content' do
-    post :create, params: { group_id: group.id, chat: attributes_for(:chat)}
-    expect(response).to redirect_to(group_chats_path)
+    context "with invalid attributes" do
+      it 'can  not create to render the same template' do
+        post :create, params: { group_id: group.id, chat: invalid_attributes }
+        expect(invalid_attributes).to render_template :index, params: { group_id: group.id }
+      end
     end
-
-    it 'does not save the new content' do
-    post :create, params: { group_id: group.id, chat: invalid_attributes }
-    expect(invalid_attributes).to render_template :index, params: { group_id: group.id }
-   end
   end
 end
