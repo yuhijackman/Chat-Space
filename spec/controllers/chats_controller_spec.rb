@@ -50,7 +50,8 @@ describe ChatsController do
       end
 
       it 'can not save the chat' do
-        expect{ post :create, params: { group_id: group.id, chat: invalid_attributes } }.to change(Chat, :count).by(0)
+        expect{
+        post :create, params: { group_id: group.id, chat: invalid_attributes } }.to change(Chat, :count).by(0)
       end
 
       it 'shows alert a message' do
