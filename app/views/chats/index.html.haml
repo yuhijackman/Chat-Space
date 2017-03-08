@@ -22,7 +22,7 @@
         = render partial: 'chat', collection: @group.chats
         .chat-space-content
       .bottom-right-content
-        = form_for [@group,@chat], html: {class: "js-form"}, format: 'json' do |f|
+        = form_for [@group,@chat], html: {class: "js-form"} do |f|
           = f.text_field :body, placeholder: "Type a message", class: "form"
           = f.submit "SEND", class: "submit"
         = link_to fa_icon("image 2x")
