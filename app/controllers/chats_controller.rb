@@ -8,7 +8,10 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
     if @chat.save
-      redirect_to group_chats_path
+      respond_to do |format|
+        format.html { redirect_to group_chats_path }
+        format.json { render json: {chat: @chat, name: @chat.user.nickname} }
+      end
     else
       flash.now[:alert] = 'メッセージを入力して下さい'
       render :index
