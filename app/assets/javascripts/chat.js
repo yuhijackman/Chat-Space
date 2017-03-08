@@ -24,7 +24,6 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      console.log(data);
       var html = buildHTML(data);
       $('.chats').append(html);
       textField.val('');
