@@ -25,7 +25,6 @@ $(function() {
     })
 
     .done(function(data) {
-      console.log(data)
       $.each(data, function(i , name) {
         var user_name = name.nickname
         var html = appendList(user_name)
