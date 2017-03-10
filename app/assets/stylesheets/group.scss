@@ -70,8 +70,19 @@
       padding: 10px 15px;
       box-sizing: border-box;
     }
-  }
+    li.list{
+      padding: 0 15px;
+      line-height: 50px;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+    }
 
+    .addition {
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+    }
+}
   .chat-group-user {
     padding: 0 15px;
     line-height: 50px;

@@ -1,10 +1,25 @@
 $(function() {
   var list = $("#user-search-result");
-
-  function appendList(name) {
-    var item = $('<li class="list">' + name + '</li>');
+  function appendList(user_info) {
+    var name = user_info.nickname ;
+    var user_id = user_info.id;
+    var item = $('<li class="list">' + `<p id = user data-user_id = ${user_id} data-user_name = ${name}>` + name + `</p>` + '<a class = "addition">' + '追加' + '</a>' + '</li>');
     list.append(item);
   }
+
+  $("#user-search-result").on('click', ".list",".addition",function(){
+    $(this).remove();
+    var user = $("#user");
+    var name = user.data('user_name');
+    var user_id = user.data('user_id');
+    var name = $('<li class= "chat-group-user">' + name + '</li>');
+    $('<input>').attr({
+        type: 'hidden',
+        value: user_id
+    }).appendTo('.field-input');
+
+    $('.field-input').append(name);
+  });
 
   $('#keyword').on('keyup', function() {
     var preWord;
@@ -26,8 +41,8 @@ $(function() {
 
     .done(function(data) {
       $.each(data, function(i , name) {
-        var user_name = name.nickname
-        var html = appendList(user_name)
+        var user_info = name
+        var html = appendList(user_info)
         $('.users').append(html);
       });
     })
@@ -35,4 +50,5 @@ $(function() {
       alert('error');
     });
   };
+
 });
