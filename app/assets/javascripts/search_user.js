@@ -3,7 +3,7 @@ $(function() {
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
-    var item = $('<li class="list">' + '<p id = user data-user_id = ' + user_id + '  data-user_name = ' + name + '>' + name + '</p>'+ '<a class = "addition">' + '追加' + '</a>' + '</li>');
+    var item = $('<li class="list">' + '<a class = "addition">' + '追加' + '</a>' + '<p id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>' + name + '</p>' + '</li>');
     list.append(item);
   }
 
@@ -25,7 +25,10 @@ $(function() {
     var preWord;
     var input = $('#keyword').val();
     if ( input != preWord ) {
+      $(".list").remove();
+      if(input.length !== 0) {
       searchUser(input);
+      }
     }
   });
 
