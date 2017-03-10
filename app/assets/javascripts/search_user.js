@@ -1,7 +1,7 @@
 $(function() {
   var list = $("#user-search-result");
   function appendList(user_info) {
-    var name = user_info.nickname ;
+    var name = user_info.nickname;
     var user_id = user_info.id;
     var item = $('<li class="list">' + `<p id = user data-user_id = ${user_id} data-user_name = ${name}>` + name + `</p>` + '<a class = "addition">' + '追加' + '</a>' + '</li>');
     list.append(item);
