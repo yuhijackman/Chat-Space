@@ -3,7 +3,7 @@ $(function() {
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
-    var item = $('<li class="list">' + '<p id = user data-user_id = ' + user_id + '  data-user_name = ' + name + '>' + name + '</p>'+ '<a class = "addition">' + '追加' + '</a>' + '</li>');
+    var item = $('<li class="list" id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>' + '<a class = "addition">' + '追加' + '</a>' + '<p>' + name + '</p>' + '</li>');
     list.append(item);
   }
 
@@ -15,6 +15,7 @@ $(function() {
     var name = $('<li class= "chat-group-user">' + name + '</li>');
     $('<input>').attr({
         type: 'hidden',
+        name: 'user_ids',
         value: user_id
     }).appendTo('.field-input');
 
@@ -25,7 +26,10 @@ $(function() {
     var preWord;
     var input = $('#keyword').val();
     if ( input != preWord ) {
-      searchUser(input);
+      $(".list").remove();
+      if(input.length !== 0) {
+        searchUser(input);
+      }
     }
   });
 
@@ -50,5 +54,4 @@ $(function() {
       alert('error');
     });
   };
-
 });
