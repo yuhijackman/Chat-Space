@@ -1,26 +1,12 @@
 $(function() {
   var list = $("#user-search-result");
+
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
     var item = $('<li class="list" id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>' + '<a class = "addition">' + '追加' + '</a>' + '<p>' + name + '</p>' + '</li>');
     list.append(item);
   }
-
-  $("#user-search-result").on('click', ".list",".addition",function(){
-    $(this).remove();
-    var user = $("#user");
-    var name = user.data('user_name');
-    var user_id = user.data('user_id');
-    var name = $('<li class= "chat-group-user">' + name + '</li>');
-    $('<input>').attr({
-        type: 'hidden',
-        name: 'user_ids',
-        value: user_id
-    }).appendTo('.field-input');
-
-    $('.field-input').append(name);
-  });
 
   $('#keyword').on('keyup', function() {
     var preWord;
@@ -54,4 +40,24 @@ $(function() {
       alert('error');
     });
   };
+
+  $("#user-search-result").on('click', ".list",".addition",function(){
+    $(this).remove();
+    var user = $("#user");
+    var name = user.data('user_name');
+    var user_id = user.data('user_id');
+    var name = $('<li class= "chat-group-user" id = users-list >' + '<a class= "chat-group-user__btn--remove">' + '削除' + '</a>' + '<p>' + name + '</p>' + '</li>');
+    $('<input>').attr({
+        type: 'hidden',
+        name: 'user_ids',
+        id: 'group_user_name',
+        value: user_id
+    }).appendTo('.field-input');
+    $('.field-input').append(name);
+  });
+
+  $(".field-input").on('click', '#users-list',function(){
+    $("#group_user_name").remove();
+    $("#users-list").remove();
+  });
 });

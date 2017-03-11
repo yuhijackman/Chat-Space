@@ -89,22 +89,11 @@
     font-size: 14px;
     border-bottom: 1px solid #ddd;
 
-    .chat-group-user__name {
-      float: left;
-    }
-
-    .chat-group-user__btn {
+    .chat-group-user__btn--remove{
       float: right;
       display: inline-block;
       cursor: pointer;
-
-      &.chat-group-user__btn--add {
-        color: #38aef0;
-      }
-
-      &.chat-group-user__btn--remove {
-        color: #f05050;
-      }
+      color: #f05050;
     }
   }
 
