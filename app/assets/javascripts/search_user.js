@@ -27,7 +27,7 @@ $(function() {
     if ( input != preWord ) {
       $(".list").remove();
       if(input.length !== 0) {
-      searchUser(input);
+        searchUser(input);
       }
     }
   });
