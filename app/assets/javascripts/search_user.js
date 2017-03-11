@@ -3,7 +3,7 @@ $(function() {
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
-    var item = $('<li class="list">' + '<a class = "addition">' + '追加' + '</a>' + '<p id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>' + name + '</p>' + '</li>');
+    var item = $('<li class="list" id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>' + '<a class = "addition">' + '追加' + '</a>' + '<p>' + name + '</p>' + '</li>');
     list.append(item);
   }
 
@@ -53,5 +53,4 @@ $(function() {
       alert('error');
     });
   };
-
 });
