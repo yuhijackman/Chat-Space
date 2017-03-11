@@ -15,6 +15,7 @@ $(function() {
     var name = $('<li class= "chat-group-user">' + name + '</li>');
     $('<input>').attr({
         type: 'hidden',
+        name: 'user_ids',
         value: user_id
     }).appendTo('.field-input');
 
