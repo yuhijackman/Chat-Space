@@ -47,13 +47,13 @@ $(function() {
     var name = user.data('user_name');
     var user_id = user.data('user_id');
     var item_field = $('<li class= "chat-group-user" id = users-list >' + '<a class= "chat-group-user__btn--remove">' + '削除' + '</a>' + '<p>' + name + '</p>' + '</li>');
-    $('<input>').attr({
+    var input = $('<input>').attr({
         type: 'hidden',
         name: 'user_ids',
         id: 'group_user_name',
         value: user_id
-    }).appendTo('.field-input');
-    $('.field-input').append(item_field);
+    });
+    $('.field-input').append(input, item_field);
   });
 
   $(".field-input").on('click', '#users-list',function(){
