@@ -4,8 +4,8 @@ $(function() {
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
-    var item = $('<li class= "list" data-user_id = '+ user_id +' data-user_name = '+ name +' >'
-               + '<a class = "addition">'
+    var item = $('<li class="list" data-user_id ='+ user_id +' data-user_name ='+ name +' >'
+               + '<a class ="addition">'
                + '追加'
                + '</a>'
                + '<p>'
@@ -52,26 +52,20 @@ $(function() {
     $(this).remove();
     var name = $(this).data('user_name');
     var user_id = $(this).data('user_id');
-    var item_field = $('<li class= "chat-group-user" id = users-list >'
-                     + '<a class= "chat-group-user__btn--remove">'
+    var input = ('<input type = "hidden"  name =' + name + ' value= ' + user_id +'>');
+    var item_field = $('<li class="chat-group-user" >'
+                     + '<a class="chat-group-user__btn--remove">'
                      + '削除'
                      + '</a>'
                      + '<p>'
                      + name
                      + '</p>'
+                     + input
                      + '</li>');
-    var input = $('<input>').attr({
-      type: 'hidden',
-      name: 'user_ids',
-      id: 'group_user_name',
-      value: user_id
-    });
-
-    $('.field-input').append(input, item_field);
+    $('.field-input').append(item_field);
   });
 
-  $('.field-input').on('click', '#users-list',function(){
-    $('#group_user_name').remove();
-    $('#users-list').remove();
+  $('.field-input').on('click','.chat-group-user',function(){
+    $(this).remove();
   });
 });
