@@ -1,9 +1,9 @@
 $(function() {
-  var list = $("#user-search-result");
 
-  function appendList(user_info) {
-    var name = user_info.nickname;
-    var user_id = user_info.id;
+  function appendList(user) {
+    var list = $("#user-search-result");
+    var name = user.nickname;
+    var user_id = user.id;
     var item = $('<li class="list" data-user_id ='+ user_id +' data-user_name ='+ name +' >'
                + '<a class ="addition">'
                + '追加'
