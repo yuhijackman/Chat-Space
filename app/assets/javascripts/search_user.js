@@ -4,7 +4,7 @@ $(function() {
   function appendList(user_info) {
     var name = user_info.nickname;
     var user_id = user_info.id;
-    var item = $('<li class="list" id = user data-user_id = ' + user_id + ' data-user_name = ' + name + '>'
+    var item = $('<li class= "list" data-user_id = '+ user_id +' data-user_name = '+ name +' >'
                + '<a class = "addition">'
                + '追加'
                + '</a>'
@@ -50,9 +50,8 @@ $(function() {
 
   $('#user-search-result').on('click', '.list','.addition',function(){
     $(this).remove();
-    var user = $('#user');
-    var name = user.data('user_name');
-    var user_id = user.data('user_id');
+    var name = $(this).data('user_name');
+    var user_id = $(this).data('user_id');
     var item_field = $('<li class= "chat-group-user" id = users-list >'
                      + '<a class= "chat-group-user__btn--remove">'
                      + '削除'
