@@ -32,7 +32,4 @@ $(function() {
       alert('error');
     });
   });
-  $('#file_upload').on('click', function(){
-    $('.hidden').click();
-  });
 });
