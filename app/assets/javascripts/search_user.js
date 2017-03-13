@@ -48,6 +48,7 @@ $(function() {
     });
   };
 
+  // 追加ボタン後にチャットメンバー横に名前と削除という文字を表示させる
   $('#user-search-result').on('click', '.list','.addition',function(){
     $(this).remove();
     var name = $(this).data('user_name');
