@@ -32,4 +32,22 @@ $(function() {
       alert('error');
     });
   });
+
+  function update(){
+    var path_name = location.pathname ;
+    $.ajax({
+      type: 'GET',
+      url: path_name,
+      dataType: 'json'
+    })
+    .done(function(data) {
+      var html = buildHTML(data);
+      $('.chats').append(html);
+      textField.val('');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
+  setInterval(update, 2000);
 });
