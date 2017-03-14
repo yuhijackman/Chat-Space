@@ -13,11 +13,12 @@ CarrierWave.configure do |config|
 
     when 'development'
       config.fog_directory = 'jawsome'
-      config.asset_host = 'https://s3.amazonaws.com/jawsome'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/jawsome'
 
     when 'test'
       config.fog_directory = 'jawsome'
-      config.asset_host = 'https://s3.amazonaws.com/jawsome'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/jawsome'
+
   end
 
 end
