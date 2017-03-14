@@ -1,14 +1,12 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::RMagick
 
   storage :fog
-
-  process convert: 'jpg'
 
   # 保存するディレクトリ名
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-
   # thumb バージョン(width 400px x height 200px)
   version :thumb do
     process resize_to_fit: [400, 200]
