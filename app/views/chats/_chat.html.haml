@@ -1,3 +1,5 @@
 %h3 #{ chat.user.nickname }
 %p.date #{ chat.created_at }
 %p.message #{ chat.body }
+.chat-image
+  = image_tag(chat.image,class: "chat-img") if chat.image?
