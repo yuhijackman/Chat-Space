@@ -3,6 +3,11 @@ class ChatsController < ApplicationController
 
   def index
     @chat = Chat.new
+    @chats = @group.chats
+      respond_to do |format|
+        format.html
+        format.json { render json: @chats }
+      end
   end
 
   def create
