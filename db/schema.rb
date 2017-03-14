@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170303113715) do
+ActiveRecord::Schema.define(version: 20170314073509) do
 
-  create_table "chats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "body",                     null: false
-    t.text     "image",      limit: 65535
+  create_table "Chats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "body",       null: false
+    t.string   "image"
     t.integer  "user_id"
     t.integer  "group_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_chats_on_group_id", using: :btree
     t.index ["user_id"], name: "index_chats_on_user_id", using: :btree
   end
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20170303113715) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "chats", "groups"
-  add_foreign_key "chats", "users"
+  add_foreign_key "Chats", "groups"
+  add_foreign_key "Chats", "users"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
 end
