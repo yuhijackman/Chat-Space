@@ -15,8 +15,14 @@
     .right-content
       .top-right-content
         .box
-          %h2 #{@group.name}
-          %p Members: yuhi
+          %h2
+            =@group.name
+          %ul
+            %li
+              Members:
+              - @group.users.each do |user|
+                %li
+                  = user.nickname
         .box-edit
           = link_to "Edit", edit_group_path(@group), class: "Edit"
       .middle-right-content
@@ -29,5 +35,4 @@
             #{fa_icon("image 2x")}
             = f.file_field :image,style: "display: none"
           = f.submit "SEND", class: "submit"
-
 

@@ -75,6 +75,13 @@
     padding-left: 40px;
   }
 
+  li{
+    font-size: 12px;
+    color: $gray;
+    padding-left: 40px;
+    display: inline-block;
+  }
+
   .box{
     float:left;
   }
@@ -110,6 +117,12 @@
   p.message{
     padding-left:40px;
     padding-bottom:40px;
+  }
+  img.chat-img{
+    width: 300px;
+    height: 200px;
+    padding-left: 40px;
+    padding-bottom: 40px;
   }
 
   .chat-space-content {
