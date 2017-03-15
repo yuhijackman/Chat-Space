@@ -52,6 +52,10 @@ group :development do
   gem 'erb2haml'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 gem 'haml-rails'
 gem 'font-awesome-rails'
 gem 'devise'
